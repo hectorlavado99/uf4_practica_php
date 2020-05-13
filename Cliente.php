@@ -10,4 +10,5 @@ class Cliente extends DBconn{
         return $result;
     }
 }
+
 ?>
