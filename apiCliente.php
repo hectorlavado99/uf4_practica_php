@@ -4,16 +4,12 @@ include 'Cliente.php';
 
 class ApiCliente{
 
-    function getAll(){
-        $myEmployer = new Cliente();
-        $result = $myEmployer->insertarClientes();
-         
-
-        
+    function insertarCliente($name,$address,$city,$email,$date){
+        $MiCliente = new Cliente();
+        $result = $MiCliente->insertarClientes($name,$address,$city,$email,$date); 
     }
 }
 
-$api = new ApiCliente();
-$api->getAll();
+
 
 ?>
