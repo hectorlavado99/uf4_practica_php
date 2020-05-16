@@ -1,15 +1,89 @@
+<form method='post' name='form'>
+ <button type="submit" class="btn btn-primary" name='inputClients'>Introducir 1000 clientes</button>
+</form>
+
 <?php
 
 include 'Cliente.php';
+include 'datos.php';
 
 class ApiCliente{
 
     function insertarCliente($name,$address,$city,$email,$date){
-        $MiCliente = new Cliente();
-        $result = $MiCliente->insertarClientes($name,$address,$city,$email,$date); 
+        $miCliente = new Cliente();
+        $result = $miCliente->insertarClientes($name,$address,$city,$email,$date); 
+    }
+    function getAll(){
+        $miCliente = new Cliente();
+        $misClientes = array();
+        $misClientes['Clientes'] = array();
+        
+        $result = $miCliente->getClientes();
+        if($result->rowCount()){
+            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                $register = array(
+                    'name' => $row['name'],
+                    'address' => $row['address'],
+                    'city' => $row['city'],
+                    'email' => $row['email'],
+                    'date' => $row['date'],
+                );
+                array_push($misClientes['Clientes'], $register);
+            }
+
+            http_response_code(200);
+            echo json_encode($misClientes);
+        }else{
+            http_response_code(404);
+           echo json_encode(array('message' => 'Eleemnt not found'));
+        }
+    
+    }
+    function getCliente($name){
+        $miCliente = new Cliente();
+        $misClientes = array();
+        $misClientes['Clientes'] = array();
+        
+        $result = $miCliente->getCliente($name);
+        if($result->rowCount()){
+            while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                $register = array(
+                    'name' => $row['name'],
+                    'address' => $row['address'],
+                    'city' => $row['city'],
+                    'email' => $row['email'],
+                    'date' => $row['date'],
+                );
+                array_push($misClientes['Clientes'], $register);
+            }
+
+            http_response_code(200);
+            echo json_encode($misClientes);
+        }else{
+            http_response_code(404);
+           echo json_encode(array('message' => 'Eleemnt not found'));
+        }
+    
     }
 }
 
 
+if (isset($_POST["inputClients"])) {
+   $datos = new Datos();
+   $datos->faker();
+   $api = new ApiCliente();
+   $api->getAll();
+}
+elseif(isset($_GET['client'])) {
+    $name = $_GET['client'];
+    $api = new ApiCliente();
+    $api->getCliente($name);
+}
+else{ 
+$api = new ApiCliente();
+$api->getAll();
+}
 
 ?>
+
+
