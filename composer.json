@@ -2,18 +2,7 @@
     "name": "albertohector/API",
     "description": "My first packagist package",
     "type": "package",
-    "require": {
-        "php": ">=5.3.0"
-    },
-    "license": "mit",
-    "authors": [
-        {
-            "name": "Your Name",
-            "email": "your@email.com",
-            "homepage": "http://yourhomepage-if-you-have.com"
-        }
-    ],
-    "minimum-stability": "stable",
+    "require": {},
     "autoload": {
         "psr-4": {
             "albertohector\\apiCliente\\"; "src/"
