@@ -17,7 +17,7 @@ class Cliente extends DBconn{
         return $result;
     }
     function getClientesDate($date){
-        $result = $this->connect()->query("SELECT * FROM cliente WHERE date < '$date'");
+        $result = $this->connect()->query("SELECT * FROM cliente WHERE date > '$date'");
         return $result;
     }
     
