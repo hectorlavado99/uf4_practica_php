@@ -1,3 +1,7 @@
+<form method='post' name='form'>
+ <button type="submit" class="btn btn-primary" name='inputClients'>Introducir 1000 clientes</button>
+</form>
+
 
 <?php
 
@@ -6,9 +10,9 @@ include 'datos.php';
 
 class ApiCliente{
 
-    function insertarCliente($name,$address,$city,$email,$date){
+    function insertarCliente($name,$address,$city,$email,$date,$quantity){
         $miCliente = new Cliente();
-        $result = $miCliente->insertarClientes($name,$address,$city,$email,$date); 
+        $result = $miCliente->insertarClientes($name,$address,$city,$email,$date,$quantity); 
     }
     function getAll(){
         $miCliente = new Cliente();
@@ -24,6 +28,7 @@ class ApiCliente{
                     'city' => $row['city'],
                     'email' => $row['email'],
                     'date' => $row['date'],
+                    'quantity' => $row['quantity'],
                 );
                 array_push($misClientes['Clientes'], $register);
             }
@@ -50,6 +55,7 @@ class ApiCliente{
                     'city' => $row['city'],
                     'email' => $row['email'],
                     'date' => $row['date'],
+                    'quantity' => $row['quantity'],
                 );
                 array_push($misClientes['Clientes'], $register);
             }
@@ -78,6 +84,7 @@ function getClientesDate($date){
                 'city' => $row['city'],
                 'email' => $row['email'],
                 'date' => $row['date'],
+                'quantity' => $row['quantity'],
             );
             array_push($misClientes['Clientes'], $register);
         }

@@ -11,8 +11,8 @@ class Datos{
         $city = $faker->city;
         $email = $faker->email;
         $date = $faker->unique()->dateTimeBetween('-30 years', 'now')->format('Y-m-d');
-        
-        $api->insertarCliente($name,$address,$city,$email,$date);
+        $quantity = $faker->numberBetween($min =0, $max = 10000);
+        $api->insertarCliente($name,$address,$city,$email,$date,$quantity);
         }
     }
 }
