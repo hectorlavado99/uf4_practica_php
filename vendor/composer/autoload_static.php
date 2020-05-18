@@ -4,27 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2fcd2e86bbba9d121059705a3e7348e9
+class ComposerStaticInit2620f19340a7ae65a3fa7b3f608e5aac
 {
-    public static $prefixLengthsPsr4 = array (
-        'F' => 
-        array (
-            'Faker\\' => 6,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Faker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
-        ),
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2fcd2e86bbba9d121059705a3e7348e9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2fcd2e86bbba9d121059705a3e7348e9::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
