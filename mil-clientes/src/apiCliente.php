@@ -1,5 +1,8 @@
-namespace ayusoHector\MilClientes;
 <?php
+
+
+require_once __DIR__ . '/../vendor/autoload.php';
+//use ourcodeworld\HelloComposer\Hello;
 
 include 'Cliente.php';
 include 'datos.php';
