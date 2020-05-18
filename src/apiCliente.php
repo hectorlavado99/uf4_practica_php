@@ -1,6 +1,6 @@
 
 <?php
-
+namespace albertohector\apiCliente;
 include 'Cliente.php';
 include 'datos.php';
 

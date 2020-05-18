@@ -1,5 +1,5 @@
 {
-    "name": "ourcodeworld/milclientes",
+    "name": "albertohector/API",
     "description": "My first packagist package",
     "type": "package",
     "require": {
@@ -16,7 +16,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "ourcodeworld\\clientes\\": "src/"
+            "albertohector\\apiCliente\\"; "src/"
         }
     }
 }
