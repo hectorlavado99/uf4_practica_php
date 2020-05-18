@@ -1,0 +1,7 @@
+{
+    "name": "albertohector/milclientes",
+    "description": "Generar 1000 clientes, filtrar por sus nombres o buscar por fechas anteriores a x a\u0000o",
+    "type": "project",
+    "license": "mit",
+    "minimum-stability": "dev"
+}
