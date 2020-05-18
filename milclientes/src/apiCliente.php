@@ -1,8 +1,7 @@
 <?php
-
-
 require_once __DIR__ . '/../vendor/autoload.php';
-//use ourcodeworld\HelloComposer\Hello;
+use ourcodeworld\milclientes\Clientes;
+
 
 include 'Cliente.php';
 include 'datos.php';
