@@ -1,6 +1,3 @@
-<form method='post' name='form'>
- <button type="submit" class="btn btn-primary" name='inputClients'>Introducir 1000 clientes</button>
-</form>
 
 <?php
 
