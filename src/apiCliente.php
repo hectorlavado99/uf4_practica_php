@@ -1,5 +1,6 @@
 <?php
 namespace albertohector\apiCliente;
+use PDO;
 include 'Cliente.php';
 include 'datos.php';
 
@@ -114,7 +115,7 @@ elseif(isset($_GET['date'])) {
 }
 else{ 
 $api = new ApiCliente();
-//$api->getAll();
+$api->getAll();
 }
 
 ?>

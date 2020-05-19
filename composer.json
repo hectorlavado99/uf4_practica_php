@@ -1,11 +1,13 @@
 {
-    "name": "albertohector/API",
-    "description": "My first packagist package",
+    "name": "albertohector/api",
+    "description": "crear 1000 clientes para pruebas y poder filtrar por nombre y data",
     "type": "package",
+    "license": "mit",
     "require": {},
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "albertohector\\apiCliente\\"; "src/"
+            "albertohector\\ApiCliente\\": "src/"
         }
     }
 }

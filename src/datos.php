@@ -1,4 +1,6 @@
 <?php
+namespace albertohector\apiCliente;
+
 class Datos{
     function faker(){
         require_once "vendor/autoload.php";

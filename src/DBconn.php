@@ -1,4 +1,8 @@
 <?php
+namespace albertohector\apiCliente;
+use PDO;
+
+
 
 class DBconn{
     private $host;
