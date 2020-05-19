@@ -1,5 +1,5 @@
 <?php
-
+include __DIR__ . "/../vendor/autoload.php";
 include 'DBconn.php';
 
 class Cliente extends DBconn{
@@ -13,7 +13,7 @@ class Cliente extends DBconn{
         return $result;
     }
     function getCliente($name){
-        $result = $this->connect()->query("SELECT * FROM cliente WHERE name LIKE '$name'");
+        $result = $this->connect()->query("SELECT * FROM cliente WHERE name LIKE '%$name%'");
         return $result;
     }
     function getClientesDate($date){

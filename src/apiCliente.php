@@ -114,7 +114,7 @@ elseif(isset($_GET['date'])) {
 }
 else{ 
 $api = new ApiCliente();
-$api->getAll();
+//$api->getAll();
 }
 
 ?>
